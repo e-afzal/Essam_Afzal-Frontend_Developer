@@ -1,0 +1,10 @@
+svg.logo {
+  height: 26.25px;
+  width: auto;
+}
+
+@media screen and (max-width: 1025px) {
+  svg.logo {
+    height: 19px;
+  }
+}

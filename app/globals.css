@@ -1,0 +1,45 @@
+/* FONT IMPORTS */
+@font-face {
+  font-family: "ddin-regular";
+  src: url("/fonts/ddin-regular.otf");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "ddin-bold";
+  src: url("/fonts/ddin-bold.otf");
+  font-display: swap;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  outline: none !important;
+}
+
+html,
+body {
+  box-sizing: border-box;
+  overflow-x: hidden;
+  margin-inline: auto;
+  font-size: 62.5%;
+}
+
+body {
+  background-color: #000;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+  font-family: "ddin-bold", sans-serif;
+  letter-spacing: 0.55px;
+  font-size: 1.4rem;
+  font-weight: 100;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}

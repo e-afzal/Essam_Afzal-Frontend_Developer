@@ -1,0 +1,29 @@
+nav#nav_desktop {
+  max-width: 1400px;
+  margin-inline: auto;
+  padding-block: 3.2rem;
+  .nav_container {
+    padding-inline: clamp(2rem, 2vw, 3.5rem);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid red;
+
+    ul.nav_items {
+      display: flex;
+      column-gap: 1.7rem;
+      li.nav_item {
+        a {
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+}
+
+// MEDIA QUERY
+@media screen and (max-width: 1025px) {
+  nav#nav_desktop {
+    display: none;
+  }
+}
