@@ -1,0 +1,220 @@
+main#main {
+  // SECTION: HERO
+  section#hero {
+    height: min(625px, 100vh);
+    position: relative;
+
+    img.hero_image_desktop {
+      margin-top: -90.25px;
+      z-index: -1;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      width: 100%;
+      height: auto;
+      left: 50%;
+      transform: translateX(-50%);
+      width: auto;
+      height: 810px;
+    }
+
+    img.hero_image_mobile {
+      display: none;
+    }
+
+    .hero_content {
+      padding-inline: clamp(2rem, 2vw, 3.5rem);
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 1;
+      h2 {
+        font-family: "ddin-bold", sans-serif;
+        font-size: clamp(7.5rem, 19vw, 9rem);
+        color: #fff;
+        text-transform: uppercase;
+        text-align: center;
+      }
+      p {
+        margin-top: 1.2rem;
+        text-align: center;
+        font-family: "ddin-regular", sans-serif;
+        color: #fff;
+        font-size: 1.6rem;
+        text-transform: uppercase;
+      }
+    }
+  }
+
+  // SECTION: FACTS
+  section#facts {
+    ul.facts_container {
+      height: 50dvh;
+      max-width: 1400px;
+      margin-inline: auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      column-gap: clamp(3.5rem, 3.5vw, 12rem);
+      padding-inline: 2.5rem;
+
+      li {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        h3 {
+          font-family: "ddin-regular", sans-serif;
+          font-size: clamp(4.8rem, 3.5vw, 13rem);
+          color: #fff;
+        }
+        p {
+          font-family: "ddin-regular", sans-serif;
+          font-size: clamp(1.2rem, 1.5vw, 2.2rem);
+          text-transform: uppercase;
+          letter-spacing: 0.55px;
+          color: #fff;
+          text-align: center;
+        }
+      }
+    }
+  }
+
+  // SECTION: TRAVEL
+  section#travel {
+    height: clamp(700px, 55vw, 1080px);
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+
+    img.travel_desktop {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: -10%;
+      width: 100%;
+      height: auto;
+      z-index: -1;
+    }
+    img.travel_mobile {
+      display: none;
+    }
+    .travel_content {
+      max-width: 540px;
+      z-index: 2;
+      position: absolute;
+      right: 2.5%;
+      top: 15%;
+      padding-right: 3.5rem;
+      h2 {
+        font-family: "ddin-bold", sans-serif;
+        font-size: clamp(4.5rem, 7.5vw, 5rem);
+        color: #fff;
+        text-transform: uppercase;
+      }
+      p {
+        color: #fff;
+        font-size: 1.6rem;
+        margin-top: 2rem;
+        font-family: "ddin-regular", sans-serif;
+        line-height: 25.6px;
+      }
+      a {
+        padding: 1.5rem 4rem;
+        border: 2px solid #fff;
+        display: inline-block;
+        margin-top: 3rem;
+        color: #fff;
+        text-transform: uppercase;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  main#main {
+    section#travel {
+      display: grid;
+      grid-template-columns: 1fr;
+      height: max-content;
+      img.travel_desktop {
+        display: none;
+      }
+      img.travel_mobile {
+        display: block;
+        order: 1;
+        width: 100%;
+        max-width: 800px;
+        margin-inline: auto;
+        height: auto;
+      }
+      .travel_content {
+        max-width: 100%;
+        padding-inline: 2.5rem;
+        order: 2;
+        position: static;
+        margin-top: 3.5rem;
+        h2 {
+          text-align: center;
+        }
+        p {
+          text-align: center;
+          max-width: 100ch;
+          margin-inline: auto;
+        }
+        a {
+          margin-inline: auto;
+          display: block;
+          text-align: center;
+          max-width: 100px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1025px) {
+  main#main {
+    // SECTION:HERO
+    section#hero {
+      height: min(545px, 100vh);
+      img.hero_image_desktop {
+        display: none;
+      }
+      img.hero_image_mobile {
+        display: block;
+        margin-top: -61px;
+        z-index: -1;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        right: 0;
+        bottom: 0;
+        transform: translateX(-50%);
+        width: auto;
+        height: 900px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  main#main {
+    section#travel {
+      .travel_content {
+        h2 {
+          text-align: left;
+        }
+        p {
+          text-align: left;
+        }
+        a {
+          margin-inline: 0;
+        }
+      }
+    }
+  }
+}
