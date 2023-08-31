@@ -23,6 +23,7 @@ body {
   overflow-x: hidden;
   margin-inline: auto;
   font-size: 62.5%;
+  -webkit-tap-highlight-color: transparent;
 }
 
 body {
