@@ -10,7 +10,6 @@ import styles from "@/public/style/components/navbar_overlay.module.scss";
 import cancelIcon from "@/public/images/icons/close.svg";
 
 const NavbarMobileOverlay = ({ menuOpen, setMenuOpen }) => {
-  console.log(menuOpen);
   const navLinks = [
     { title: "falcon 9", url: "#" },
     { title: "falcon heavy", url: "#" },

@@ -162,6 +162,14 @@ main#main {
       }
     }
   }
+
+  // SECTION: HORIZON
+  section#horizon {
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
 }
 
 @media screen and (max-width: 1440px) {

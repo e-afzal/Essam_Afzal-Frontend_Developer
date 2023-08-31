@@ -16,6 +16,7 @@ import hero_mobile from "@/public/images/mobile/hero.jpg";
 import reveal_mobile from "@/public/images/mobile/renders/reveal_mobile.jpg";
 import travel_desktop from "@/public/images/desktop/travel.jpg";
 import travel_mobile from "@/public/images/mobile/travel.jpg";
+import horizon from "@/public/images/desktop/horizon.jpg";
 
 export default function Home() {
   const facts = [
@@ -100,6 +101,14 @@ export default function Home() {
             </p>
             <Link href={"#"}>learn more</Link>
           </div>
+        </section>
+
+        {/* HORIZON */}
+        <section id={styles.horizon}>
+          <Image
+            src={horizon}
+            alt="Dragon is seen against the Earth's atmosphere"
+          />
         </section>
       </main>
       <Footer />
