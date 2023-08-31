@@ -18,7 +18,7 @@ const NavbarMobile = () => {
 
         {/* MENU */}
         <button>
-          <Image src={menu} />
+          <Image src={menu} alt="Hamburger menu" />
         </button>
       </div>
     </nav>

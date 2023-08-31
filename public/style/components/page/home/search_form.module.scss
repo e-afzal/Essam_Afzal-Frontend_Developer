@@ -1,0 +1,89 @@
+.search_form_container {
+  padding-inline: 2.5rem;
+  max-width: 1400px;
+  margin-inline: auto;
+  h2.search_title {
+    font-family: "ddin-bold", sans-serif;
+    font-size: clamp(4.5rem, 7.5vw, 5rem);
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+  }
+  p.search_description {
+    color: #fff;
+    font-size: 1.6rem;
+    margin-top: 1rem;
+    font-family: "ddin-regular", sans-serif;
+    line-height: 25.6px;
+    max-width: 85ch;
+    margin-inline: auto;
+    text-align: center;
+  }
+
+  .search_form {
+    margin-top: 3.5rem;
+    .search_field_container {
+      display: flex;
+      column-gap: 2rem;
+      max-width: 650px;
+      margin-inline: auto;
+      input#search_field {
+        flex-grow: 2;
+        color: #fff;
+        padding: 2rem;
+        background-color: #000;
+        font-family: "ddin-regular", sans-serif;
+        border: 1px solid rgba($color: #fff, $alpha: 0.3);
+
+        &::placeholder {
+          color: #fff;
+          text-transform: capitalize;
+        }
+      }
+      button#search_field_button {
+        flex-grow: 1;
+        border: 2px solid #fff;
+        color: #fff;
+        text-align: center;
+        padding: 2rem;
+        font-family: "ddin-regular", sans-serif;
+        text-transform: uppercase;
+      }
+    }
+    .search_data_grid {
+      margin-top: 5rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 310px));
+      justify-content: center;
+      column-gap: 2.5vw;
+      row-gap: 5rem;
+      //   GRID CARD
+      .grid_card {
+        img.card_image {
+          margin-inline: auto;
+          display: block;
+          width: 300px;
+          height: 300px;
+          object-fit: cover;
+          border-radius: 8.5px;
+        }
+        h4 {
+          text-align: center;
+          font-family: "ddin-regular", sans-serif;
+          margin-top: 2rem;
+          font-size: 1.8rem;
+          color: rgba($color: #fff, $alpha: 0.5);
+          text-transform: uppercase;
+          letter-spacing: 1px;
+        }
+      }
+    }
+    h2.empty_result {
+      font-family: "ddin-bold", sans-serif;
+      font-size: 3.2rem;
+      color: rgba($color: #fff, $alpha: 0.5);
+      text-transform: uppercase;
+      text-align: center;
+    }
+  }
+}

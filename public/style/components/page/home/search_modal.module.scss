@@ -1,0 +1,93 @@
+.popup {
+  background-color: #000;
+  .popup_container {
+    max-width: 1400px;
+    padding-inline: 2.5rem;
+    margin-inline: auto;
+    .popup_close {
+      margin-top: 3.5rem;
+      display: flex;
+      justify-content: flex-end;
+      img.close_icon {
+        height: auto;
+        width: 100%;
+        width: clamp(2.5rem, 5vw, 4.5rem);
+      }
+    }
+    .popup_grid {
+      margin-top: 5.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .popup_content {
+        h2 {
+          font-family: "ddin-bold", sans-serif;
+          font-size: clamp(4.5rem, 7.5vw, 5rem);
+          color: #fff;
+          text-transform: uppercase;
+        }
+        .popup_table {
+          margin-top: 5.5rem;
+          max-width: 420px;
+          .fact_row {
+            padding-block: 2rem;
+            border-bottom: 1px solid rgba($color: #fff, $alpha: 0.3);
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            column-gap: 2rem;
+            p {
+              font-size: 1.55rem;
+              color: #fff;
+              text-transform: uppercase;
+              font-family: "ddin-bold", sans-serif;
+              sup {
+                font-size: 1.2rem;
+              }
+            }
+            p.fact {
+              font-size: 2rem;
+              font-family: "ddin-regular", sans-serif;
+            }
+          }
+        }
+      }
+      .popup_image {
+        img {
+          width: 100%;
+          max-width: 700px;
+          height: auto;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .popup {
+    .popup_container {
+      .popup_grid {
+        display: grid;
+        grid-template-columns: 100%;
+        row-gap: 3.5rem;
+        .popup_image {
+          order: 1;
+          img {
+            min-width: 310px;
+            margin-inline: auto;
+            display: block;
+          }
+        }
+        .popup_content {
+          order: 2;
+          h2 {
+            text-align: center;
+          }
+          .popup_table {
+            max-width: 1000px;
+          }
+        }
+      }
+    }
+  }
+}
