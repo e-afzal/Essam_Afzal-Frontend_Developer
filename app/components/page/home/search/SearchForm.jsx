@@ -3,10 +3,10 @@
 import { useState, useEffect } from "react";
 
 // STYLES
-import styles from "@/public/style/components/page/home/search_form.module.scss";
+import styles from "../../../../../public/style/components/page/home/search_form.module.scss";
 
 // COMPONENTS
-import GridCard from "@/app/components/page/home/search/GridCard";
+import GridCard from "./GridCard";
 
 export default function SearchForm() {
   const [searchQuery, setSearchQuery] = useState("");
@@ -24,11 +24,11 @@ export default function SearchForm() {
       .catch((err) => console.log(err.message));
   }, []);
 
-  //? HANDLERS
+  // HANDLERS
   const searchHandler = () => {
     const filteredQueryKeyword = searchQuery.trim();
     const filteredData = originalDragons.filter((dragon) =>
-      dragon.name.toLowerCase().includes(filteredQueryKeyword)
+      dragon.name.toLowerCase().includes(filteredQueryKeyword),
     );
     setFilteredDragons(filteredData);
     //! If no query provided, return original data
@@ -48,7 +48,11 @@ export default function SearchForm() {
             placeholder="enter dragon name"
             onChange={(e) => setSearchQuery(e.target.value.toLowerCase())}
           />
-          <button id={styles.search_field_button} onClick={searchHandler}>
+          <button
+            type="button"
+            id={styles.search_field_button}
+            onClick={searchHandler}
+          >
             search
           </button>
         </div>

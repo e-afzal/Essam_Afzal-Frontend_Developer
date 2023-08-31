@@ -1,9 +1,10 @@
+import Link from "next/link";
+
 // STYLES
-import styles from "@/public/style/components/footer.module.scss";
+import styles from "../../public/style/components/footer.module.scss";
 
 // COMPONENTS
-import SpaceXLogo from "@/app/components/Logo";
-import Link from "next/link";
+import SpaceXLogo from "./Logo";
 
 export default function Footer() {
   const footerLinks = [

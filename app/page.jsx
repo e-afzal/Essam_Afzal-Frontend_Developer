@@ -2,21 +2,21 @@ import Image from "next/image";
 import Link from "next/link";
 
 // STYLES
-import styles from "@/public/style/page/home.module.scss";
+import styles from "../public/style/page/home.module.scss";
 
 // COMPONENTS
-import Navbar from "@/app/components/Navbar";
-import NavbarMobile from "@/app/components/NavbarMobile";
-import Footer from "@/app/components/Footer";
-import SearchForm from "@/app/components/page/home/search/SearchForm";
+import Navbar from "./components/Navbar";
+import NavbarMobile from "./components/NavbarMobile";
+import Footer from "./components/Footer";
+import SearchForm from "./components/page/home/search/SearchForm";
 
 // ASSET IMPORTS
-import hero_desktop from "@/public/images/desktop/hero.jpg";
-import hero_mobile from "@/public/images/mobile/hero.jpg";
-import reveal_mobile from "@/public/images/mobile/renders/reveal_mobile.jpg";
-import travel_desktop from "@/public/images/desktop/travel.jpg";
-import travel_mobile from "@/public/images/mobile/travel.jpg";
-import horizon from "@/public/images/desktop/horizon.jpg";
+import heroDesktop from "../public/images/desktop/hero.jpg";
+import heroMobile from "../public/images/mobile/hero.jpg";
+import revealMobile from "../public/images/mobile/renders/reveal_mobile.jpg";
+import travelDesktop from "../public/images/desktop/travel.jpg";
+import travelMobile from "../public/images/mobile/travel.jpg";
+import horizon from "../public/images/desktop/horizon.jpg";
 
 export default function Home() {
   const facts = [
@@ -35,12 +35,12 @@ export default function Home() {
           <Image
             loading="eager"
             className={styles.hero_image_desktop}
-            src={hero_desktop}
+            src={heroDesktop}
             alt="Closeup of a Dragon as it approaches the International Space Station for docking"
           />
           <Image
             className={styles.hero_image_mobile}
-            src={hero_mobile}
+            src={heroMobile}
             alt="Closeup of a Dragon as it approaches the International Space Station for docking"
           />
           <div className={styles.hero_content}>
@@ -63,7 +63,7 @@ export default function Home() {
 
         {/* SECTION: REVEAL */}
         <section id={styles.reveal}>
-          <Image src={reveal_mobile} alt="Dragon Line Based Illustration" />
+          <Image src={revealMobile} alt="Dragon Line Based Illustration" />
           <p>
             The Dragon spacecraft is capable of carrying up to 7 passengers to
             and from Earth orbit, and beyond. It is the only spacecraft
@@ -81,12 +81,12 @@ export default function Home() {
         {/* TRAVEL */}
         <section id={styles.travel}>
           <Image
-            src={travel_desktop}
+            src={travelDesktop}
             alt="A portrait of an astronaut wearing a SpaceX space suit"
             className={styles.travel_desktop}
           />
           <Image
-            src={travel_mobile}
+            src={travelMobile}
             alt="A portrait of an astronaut wearing a SpaceX space suit"
             className={styles.travel_mobile}
           />
@@ -99,7 +99,7 @@ export default function Home() {
               space for NASA, SpaceX’s Dragon spacecraft can also carry
               commercial astronauts to Earth orbit, the ISS or beyond.
             </p>
-            <Link href={"#"}>learn more</Link>
+            <Link href="/">learn more</Link>
           </div>
         </section>
 

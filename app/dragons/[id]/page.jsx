@@ -1,16 +1,17 @@
 "use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
 // STYLES
-import styles from "@/public/style/components/page/home/search_modal.module.scss";
+import styles from "../../../public/style/components/page/home/search_modal.module.scss";
 
 // ASSET IMPORT
-import cancelIcon from "@/public/images/icons/close.svg";
-import dragonImage from "@/public/images/mobile/renders/Dragon_Render_Mobile.jpg";
+import cancelIcon from "../../../public/images/icons/close.svg";
+import dragonImage from "../../../public/images/mobile/renders/Dragon_Render_Mobile.jpg";
 
-const SingleDragon = ({ params: { id } }) => {
+function SingleDragon({ params: { id } }) {
   const [dragonData, setDragonData] = useState(null);
 
   // USE EFFECT - Fetch Dragon Data
@@ -27,7 +28,7 @@ const SingleDragon = ({ params: { id } }) => {
     return (
       <div className={styles.popup}>
         <div className={styles.popup_container}>
-          <Link href={"/"} className={styles.popup_close}>
+          <Link href="/" className={styles.popup_close}>
             <Image
               src={cancelIcon}
               alt="Cancel icon"
@@ -63,7 +64,6 @@ const SingleDragon = ({ params: { id } }) => {
                   <p>trunk volume</p>
                   <p className={styles.fact}>
                     {`${dragonData.trunk.trunk_volume.cubic_meters}m`}
-                    {""}
                     <sup>3</sup> /{" "}
                     <span>
                       {`${dragonData.trunk.trunk_volume.cubic_feet} ft`}
@@ -92,6 +92,6 @@ const SingleDragon = ({ params: { id } }) => {
       </div>
     );
   }
-};
+}
 
 export default SingleDragon;

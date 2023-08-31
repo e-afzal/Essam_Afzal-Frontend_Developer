@@ -1,10 +1,10 @@
 import Link from "next/link";
 
 // STYLES
-import styles from "@/public/style/components/navbar.module.scss";
+import styles from "../../public/style/components/navbar.module.scss";
 
 // COMPONENTS
-import SpaceXLogo from "@/app/components/Logo";
+import SpaceXLogo from "./Logo";
 
 export default function Navbar() {
   const navLinks = [

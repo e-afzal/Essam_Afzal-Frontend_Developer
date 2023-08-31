@@ -1,18 +1,19 @@
 "use client";
+
 import { useState } from "react";
 import Image from "next/image";
 
 // STYLES
-import styles from "@/public/style/components/navbar_mobile.module.scss";
+import styles from "../../public/style/components/navbar_mobile.module.scss";
 
 // COMPONENTS
-import SpaceXLogo from "@/app/components/Logo";
-import NavbarMobileOverlay from "@/app/components/NavbarMobileOverlay";
+import SpaceXLogo from "./Logo";
+import NavbarMobileOverlay from "./NavbarMobileOverlay";
 
 // ASSET IMPORTS
-import menu from "@/public/images/icons/menu.svg";
+import menu from "../../public/images/icons/menu.svg";
 
-const NavbarMobile = () => {
+function NavbarMobile() {
   // STATE
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -26,7 +27,7 @@ const NavbarMobile = () => {
         <SpaceXLogo />
 
         {/* MENU */}
-        <button>
+        <button type="button">
           <Image
             src={menu}
             alt="Hamburger menu"
@@ -36,6 +37,6 @@ const NavbarMobile = () => {
       </div>
     </nav>
   );
-};
+}
 
 export default NavbarMobile;

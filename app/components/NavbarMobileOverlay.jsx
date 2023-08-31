@@ -4,12 +4,12 @@ import Image from "next/image";
 import Link from "next/link";
 
 // STYLES
-import styles from "@/public/style/components/navbar_overlay.module.scss";
+import styles from "../../public/style/components/navbar_overlay.module.scss";
 
 // ASSET IMPORT
-import cancelIcon from "@/public/images/icons/close.svg";
+import cancelIcon from "../../public/images/icons/close.svg";
 
-const NavbarMobileOverlay = ({ menuOpen, setMenuOpen }) => {
+function NavbarMobileOverlay({ menuOpen, setMenuOpen }) {
   const navLinks = [
     { title: "falcon 9", url: "#" },
     { title: "falcon heavy", url: "#" },
@@ -25,7 +25,7 @@ const NavbarMobileOverlay = ({ menuOpen, setMenuOpen }) => {
       className={styles.overlay_container}
       style={{ display: menuOpen ? "flex" : "none" }}
     >
-      <div className={styles.overlay_empty}></div>
+      <div className={styles.overlay_empty} />
       <div className={styles.overlay_menu}>
         <div className={styles.close_container}>
           <Image
@@ -44,6 +44,6 @@ const NavbarMobileOverlay = ({ menuOpen, setMenuOpen }) => {
       </div>
     </div>
   );
-};
+}
 
 export default NavbarMobileOverlay;
