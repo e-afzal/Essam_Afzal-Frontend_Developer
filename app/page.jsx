@@ -32,6 +32,7 @@ export default function Home() {
         {/* SECTION: HERO */}
         <section id={styles.hero}>
           <Image
+            loading="eager"
             className={styles.hero_image_desktop}
             src={hero_desktop}
             alt="Closeup of a Dragon as it approaches the International Space Station for docking"

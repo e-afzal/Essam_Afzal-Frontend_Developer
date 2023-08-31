@@ -37,6 +37,7 @@ const SingleDragon = ({ params: { id } }) => {
           <div className={styles.popup_grid}>
             <div className={styles.popup_image}>
               <Image
+                loading="eager"
                 src={dragonImage}
                 alt="Generic image of a Dragon Capsule"
               />

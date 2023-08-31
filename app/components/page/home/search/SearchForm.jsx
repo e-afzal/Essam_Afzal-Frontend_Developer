@@ -38,16 +38,14 @@ export default function SearchForm() {
   return (
     <div className={styles.search_form_container}>
       <h2 className={styles.search_title}>search dragon</h2>
-      <p className={styles.search_description}>
-        Search a dragon by its name or type
-      </p>
+      <p className={styles.search_description}>Search by dragon name</p>
 
       <div className={styles.search_form}>
         <div className={styles.search_field_container}>
           <input
             type="text"
             id={styles.search_field}
-            placeholder="enter name, type or status"
+            placeholder="enter dragon name"
             onChange={(e) => setSearchQuery(e.target.value.toLowerCase())}
           />
           <button id={styles.search_field_button} onClick={searchHandler}>
